@@ -9,19 +9,7 @@ class CfgPatches {
 
 class CfgFunctions {
 	class ws_objects {
-		class custom1 {
-			file = "ws_objects";
-			class init {
-				postInit = 1;
-			};
-		};
-		class custom2 {
-			file = "ws_objects";
-			class init {
-				postInit = 1;
-			};
-		};
-		class custom3 {
+		class vorlage {
 			file = "ws_objects";
 			class init {
 				postInit = 1;

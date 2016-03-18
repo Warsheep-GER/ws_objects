@@ -6,12 +6,9 @@
 	Version: V1.0 Beta
 */
 diag_log "WsObjects Init Start";
-	[] execVM "ws_objects\fn_cfg.sqf";
-	uisleep 2;
-	[] execVM "ws_objects\objects\fn_custom1.sqf";
-	uisleep 1;
-	[] execVM "ws_objects\objects\fn_custom2.sqf";
-	uisleep 1;
-	[] execVM "ws_objects\objects\fn_custom3.sqf";
-	uisleep 2;
+	private["_handle"];
+	_handle =[] execVM "ws_objects\fn_cfg.sqf";
+	waitUntil {scriptDone _handle};
+	[] execVM "ws_objects\fn_call.sqf";
+	[] execVM "ws_objects\objects\fn_vorlage.sqf";
 diag_log "WsObjects Init End";
